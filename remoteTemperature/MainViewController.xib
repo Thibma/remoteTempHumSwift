@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="remoteTemperature" customModuleProvider="target">
+            <connections>
+                <outlet property="humidityLabel" destination="LVr-T3-zLN" id="Cuz-Xd-n4E"/>
+                <outlet property="reloadButton" destination="oMI-ed-uAy" id="q1B-nr-HkF"/>
+                <outlet property="stateLabel" destination="DrE-cd-y4V" id="0XD-JN-2XP"/>
+                <outlet property="temperatureLabel" destination="i3t-tU-d8A" id="Dfk-MO-cw7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrE-cd-y4V">
+                    <rect key="frame" x="108" y="94" width="198" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4N9-fR-ayj">
+                    <rect key="frame" x="111" y="230" width="192" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nil °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3t-tU-d8A">
+                    <rect key="frame" x="172.5" y="271" width="69" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidité :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeb-qS-OVd">
+                    <rect key="frame" x="136" y="407" width="142" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nil %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVr-T3-zLN">
+                    <rect key="frame" x="177" y="448" width="60.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMI-ed-uAy">
+                    <rect key="frame" x="147.5" y="770" width="119" height="42"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <state key="normal" title="Actualiser"/>
+                    <connections>
+                        <action selector="reloadPressButton:" destination="-1" eventType="touchUpInside" id="tZO-kl-dus"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="i3t-tU-d8A" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6Ez-02-kXp"/>
+                <constraint firstItem="4N9-fR-ayj" firstAttribute="top" secondItem="DrE-cd-y4V" secondAttribute="bottom" constant="100" id="7PA-3w-uvx"/>
+                <constraint firstItem="LVr-T3-zLN" firstAttribute="top" secondItem="Yeb-qS-OVd" secondAttribute="bottom" constant="5" id="DPP-N7-2CP"/>
+                <constraint firstItem="Yeb-qS-OVd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ic1-kd-Lxg"/>
+                <constraint firstItem="4N9-fR-ayj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Sea-9m-TKt"/>
+                <constraint firstItem="Yeb-qS-OVd" firstAttribute="top" secondItem="i3t-tU-d8A" secondAttribute="bottom" constant="100" id="T4x-8J-dLr"/>
+                <constraint firstItem="LVr-T3-zLN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fGk-BY-76R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oMI-ed-uAy" secondAttribute="bottom" constant="50" id="h69-pP-LAm"/>
+                <constraint firstItem="i3t-tU-d8A" firstAttribute="top" secondItem="4N9-fR-ayj" secondAttribute="bottom" constant="5" id="i3m-YE-egL"/>
+                <constraint firstItem="DrE-cd-y4V" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ij3-ed-0oh"/>
+                <constraint firstItem="DrE-cd-y4V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="iwu-6E-8Mv"/>
+                <constraint firstItem="oMI-ed-uAy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="umF-UW-60y"/>
+            </constraints>
+            <point key="canvasLocation" x="124.6376811594203" y="98.4375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

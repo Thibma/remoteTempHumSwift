@@ -1,0 +1,6 @@
+framework module Pods_remoteTemperature {
+  umbrella header "Pods-remoteTemperature-umbrella.h"
+
+  export *
+  module * { export * }
+}
